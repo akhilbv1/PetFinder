@@ -52,9 +52,9 @@ fun ComposeListText(
     text: String,
     fontSize: TextUnit,
     style: TextStyle,
-    modifier: Modifier = Modifier
-) {
-    val textColor = if (isSystemInDarkTheme()) TextColorDarkTheme else TextColorLightTheme
+    modifier: Modifier = Modifier,
+    textColor:Color = Color.White,
+    ) {
     Text(
         text,
         modifier = modifier,
@@ -62,6 +62,6 @@ fun ComposeListText(
         maxLines = 2,
         color = textColor,
         fontSize = fontSize,
-        fontFamily = FontFamily.SansSerif
+        fontFamily = FontFamily.Monospace
     )
 }
